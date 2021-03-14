@@ -120,7 +120,7 @@ const HomePage = ({ navigation }) => {
                                         </View>
                                     </View>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('Snack')}>
+                                <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('Snacks')}>
                                     <View style={styles.categoryList}>
                                         <Image style={styles.imgSize} source={require('../img/slider3.jpg')} />
                                         <View style={styles.textTitleDesc}>

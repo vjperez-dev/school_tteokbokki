@@ -110,7 +110,7 @@ const Noodles = ({ navigation }) => {
           <View style={{ width: 120, height: 50, marginTop: 10, padding: 2 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => Alert.alert('Ready to Eat')}
+              onPress={() => () => navigation.navigate('CookedFood')}
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Ready To Eat</Text>
             </TouchableOpacity>
@@ -119,7 +119,7 @@ const Noodles = ({ navigation }) => {
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => Alert.alert('Frozen')}
+              onPress={() => () => navigation.navigate('FrozenFoodvvvvvvvvvvvvvvv')}
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Frozen Foods</Text>
             </TouchableOpacity>
@@ -136,7 +136,6 @@ const Noodles = ({ navigation }) => {
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => Alert.alert('Noodles')}
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Noodles</Text>
             </TouchableOpacity>
@@ -144,7 +143,7 @@ const Noodles = ({ navigation }) => {
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => Alert.alert('Noodles')}
+              onPress={() => () => navigation.navigate('Snacks')
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Snacks</Text>
             </TouchableOpacity>
