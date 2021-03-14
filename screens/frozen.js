@@ -1,15 +1,11 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, Text, StatusBar, ScrollView, Dimensions, Image, TouchableHighlight, TouchableOpacity } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
-
 
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 2 - 20;
-
-
 
 const LIST = [
   {
@@ -49,7 +45,6 @@ const Products3 = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <Item title={item.title} />
   );
-
   const Card = ({ LIST }) => {
     return (
       <TouchableHighlight underlayColor='#ffffff' activeOpacity={0.9} onPress={() => navigation.navigate('Cart')}>
@@ -75,6 +70,7 @@ const Products3 = ({ navigation }) => {
       </TouchableHighlight>
     );
   };
+  
   return (
     <View style={{ flex: 1 }}>
       <SafeAreaView style={{ flex: 0, backgroundColor: '#e7a133' }} />
@@ -104,7 +100,6 @@ const Products3 = ({ navigation }) => {
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Ready To Eat</Text>
             </TouchableOpacity>
           </View>
-
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
               style={styles.button}
@@ -112,7 +107,6 @@ const Products3 = ({ navigation }) => {
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Frozen Foods</Text>
             </TouchableOpacity>
-
           </View>
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity

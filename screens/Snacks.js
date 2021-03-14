@@ -1,16 +1,11 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, Text, TouchableOpacity, StatusBar, Card, Alert, Dimensions, Image, TouchableHighlight, ScrollView } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
-
-
 
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 2 - 20;
-
-
 
 const LIST = [
   {
@@ -155,9 +150,6 @@ const Snacks = ({ navigation }) => {
         renderItem={({ item }) => <Card LIST={item} />}
       />
     </View>
-
-
-
   );
 }
 

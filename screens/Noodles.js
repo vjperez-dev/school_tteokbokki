@@ -1,17 +1,11 @@
 import React from 'react';
-import { View, FlatList, StyleSheet, Text, TouchableOpacity, StatusBar, Card, Alert, Dimensions, Image, TouchableHighlight, ScrollView } from 'react-native';
+import { View, FlatList, StyleSheet, Text, TouchableOpacity, StatusBar, Dimensions, Image, TouchableHighlight, ScrollView } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
-
-
-
 
 const { width } = Dimensions.get("screen");
 const cardWidth = width / 2 - 20;
-
-
 
 const LIST = [
   {
@@ -62,7 +56,6 @@ const Noodles = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <Item title={item.title} />
   );
-
   const Card = ({ LIST }) => {
     return (
       <TouchableHighlight underlayColor='#ffffff' activeOpacity={0.9} onPress={() => navigation.navigate('Cart')}>
@@ -71,7 +64,6 @@ const Noodles = ({ navigation }) => {
             <Image source={LIST.image} style={{ height: 130, width: 130 }} />
             <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{LIST.title}</Text>
           </View>
-
           <View style={{
             marginTop: 50,
             marginVertical: 30,
@@ -84,7 +76,6 @@ const Noodles = ({ navigation }) => {
               <AntDesign name="plus" size={20} color='white'></AntDesign>
             </View>
           </View>
-
         </View>
       </TouchableHighlight>
     );
@@ -122,7 +113,6 @@ const Noodles = ({ navigation }) => {
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Ready To Eat</Text>
             </TouchableOpacity>
           </View>
-
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
               style={styles.button}
@@ -130,7 +120,6 @@ const Noodles = ({ navigation }) => {
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Frozen Foods</Text>
             </TouchableOpacity>
-
           </View>
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
@@ -156,19 +145,14 @@ const Noodles = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </ScrollView>
-
       </View>
       <FlatList
-
         showsVerticalScrollIndicator={false}
         numColumns={2}
         data={LIST}
         renderItem={({ item }) => <Card LIST={item} />}
       />
     </View>
-
-
-
   );
 }
 
