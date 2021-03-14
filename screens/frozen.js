@@ -52,7 +52,7 @@ const Products3 = ({ navigation }) => {
 
   const Card = ({ LIST }) => {
     return (
-      <TouchableHighlight underlayColor='#ffffff' activeOpacity={0.9} >
+      <TouchableHighlight underlayColor='#ffffff' activeOpacity={0.9} onPress={() => navigation.navigate('Cart')}>
         <View style={styles.card}>
           <View style={{ alignItems: 'center', top: 20 }}>
             <Image source={LIST.image} style={{ height: 120, width: 120 }} />
