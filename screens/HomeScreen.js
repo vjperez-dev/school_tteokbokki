@@ -109,13 +109,13 @@ const HomePage = ({ navigation }) => {
                                         <Image style={styles.imgSize} source={require('../img/noodle.png')} />
                                         <View style={styles.textTitleDesc}>
                                             <Text style={styles.textTitle}>Noodles</Text>
-                                            <Text style={styles.textDesc}>Drinks for your cooked meal to go with.</Text>
+                                            <Text style={styles.textDesc}> Delicious than you imagine. </Text>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('FrozenFood')}>
                                     <View style={styles.categoryList}>
-                                        <Image style={styles.imgSize} source={require('../img/frozen.png')} />
+                                        <Image style={styles.imgSize} source={require('../img/frozen/1.png')} />
                                         <View style={styles.textTitleDesc}>
                                             <Text style={styles.textTitle}>Frozen Food</Text>
                                             <Text style={styles.textDesc}>A Frozen food that can order in bulk {'\n'}for your stock in the fridge</Text>
@@ -124,10 +124,10 @@ const HomePage = ({ navigation }) => {
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('Snacks')}>
                                     <View style={styles.categoryList}>
-                                        <Image style={styles.imgSize} source={require('../img/snack.png')} />
+                                        <Image style={styles.imgSize} source={require('../img/snacks/1.png')} />
                                         <View style={styles.textTitleDesc}>
                                             <Text style={styles.textTitle}>Snacks</Text>
-                                            <Text style={styles.textDesc}>Drinks for your cooked meal to go with.</Text>
+                                            <Text style={styles.textDesc}>Good food brings a good mood. </Text>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
