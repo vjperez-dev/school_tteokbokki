@@ -67,17 +67,19 @@ const HomePage = ({ navigation }) => {
             ref={drawer}
             drawerWidth={300}
             renderNavigationView={navigationView}>
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1}}>
                 <SafeAreaView style={{ flex: 1 }}>
                     <View style={styles.headerContainer}>
                         <TouchableOpacity style={{ marginTop: 2 }} onPress={() => drawer.current.openDrawer()}>
                             <Entypo name='menu' size={30} />
                         </TouchableOpacity>
-                        <Text style={styles.headerTitle}>Home</Text>
-                        <View style={styles.btnAddtoCartCont}>
-                            <TouchableOpacity style={styles.btnAddtoCart} onPress={() => navigation.navigate('Cart')}>
-                                <AntDesign name='shoppingcart' size={30} />
-                            </TouchableOpacity>
+                        <View style={styles.titleCartCont}>
+                            <Text style={styles.headerTitle}>Home</Text>
+                            <View>
+                                <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+                                    <AntDesign name='shoppingcart' size={30} />
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
                     <ScrollView style={styles.container}>
@@ -95,7 +97,7 @@ const HomePage = ({ navigation }) => {
                             <View style={styles.containerList}>
                                 <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('CookedFood')}>
                                     <View style={styles.categoryList}>
-                                        <Image style={styles.imgSize} source={require('../img/slider1.jpg')} />
+                                        <Image style={styles.imgSize} source={require('../img/cooked.png')} />
                                         <View style={styles.textTitleDesc}>
                                             <Text style={styles.textTitle}>Cooked Food</Text>
                                             <Text style={styles.textDesc}>A ready to eat food with one call away {'\n'}from you.</Text>
@@ -104,7 +106,7 @@ const HomePage = ({ navigation }) => {
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('Noodles')}>
                                     <View style={styles.categoryList}>
-                                        <Image style={styles.imgSize} source={require('../img/slider3.jpg')} />
+                                        <Image style={styles.imgSize} source={require('../img/noodle.png')} />
                                         <View style={styles.textTitleDesc}>
                                             <Text style={styles.textTitle}>Noodles</Text>
                                             <Text style={styles.textDesc}>Drinks for your cooked meal to go with.</Text>
@@ -113,7 +115,7 @@ const HomePage = ({ navigation }) => {
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('FrozenFood')}>
                                     <View style={styles.categoryList}>
-                                        <Image style={styles.imgSize} source={require('../img/slider2.jpg')} />
+                                        <Image style={styles.imgSize} source={require('../img/frozen.png')} />
                                         <View style={styles.textTitleDesc}>
                                             <Text style={styles.textTitle}>Frozen Food</Text>
                                             <Text style={styles.textDesc}>A Frozen food that can order in bulk {'\n'}for your stock in the fridge</Text>
@@ -122,7 +124,7 @@ const HomePage = ({ navigation }) => {
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('Snacks')}>
                                     <View style={styles.categoryList}>
-                                        <Image style={styles.imgSize} source={require('../img/slider3.jpg')} />
+                                        <Image style={styles.imgSize} source={require('../img/snack.png')} />
                                         <View style={styles.textTitleDesc}>
                                             <Text style={styles.textTitle}>Snacks</Text>
                                             <Text style={styles.textDesc}>Drinks for your cooked meal to go with.</Text>
@@ -131,7 +133,7 @@ const HomePage = ({ navigation }) => {
                                 </TouchableOpacity>
                                 <TouchableOpacity style={styles.categoryList} onPress={() => navigation.navigate('Drinks')}>
                                     <View style={styles.categoryList}>
-                                        <Image style={styles.imgSize} source={require('../img/slider3.jpg')} />
+                                        <Image style={styles.imgSize} source={require('../img/drink.png')} />
                                         <View style={styles.textTitleDesc}>
                                             <Text style={styles.textTitle}>Drinks</Text>
                                             <Text style={styles.textDesc}>Drinks for your cooked meal to go with.</Text>
@@ -162,7 +164,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         paddingHorizontal: 10,
         paddingVertical: 10,
-        width: '100%'
     },
     headerTitle: {
         textAlign: 'center',
@@ -261,10 +262,12 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     btnAddtoCart: {
-        alignItems: 'flex-end',
+        alignSelf:'flex-end',
     },
-    btnAddtoCartCont: {
-        marginLeft: 245,
+    titleCartCont : {
+        flexDirection:'row',
+        justifyContent:'space-between',
+        width:'91%',
     }
 });
 export default HomePage;

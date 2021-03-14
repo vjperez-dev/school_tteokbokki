@@ -97,7 +97,14 @@ const Noodles = ({ navigation }) => {
         <TouchableOpacity style={{ marginTop: 2 }} onPress={() => navigation.navigate('Home')}>
           <Ionicons name='arrow-back-outline' size={30} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Products</Text>
+        <View style={styles.titleCartCont}>
+          <Text style={styles.headerTitle}>Products</Text>
+          <View>
+            <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+              <AntDesign name='shoppingcart' size={30} />
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
       <View style={styles.title}>
         <Text style={{ fontSize: 32, fontWeight: 'bold', color: 'black' }}>Noodles</Text>
@@ -110,7 +117,7 @@ const Noodles = ({ navigation }) => {
           <View style={{ width: 120, height: 50, marginTop: 10, padding: 2 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => () => navigation.navigate('CookedFood')}
+              onPress={() => navigation.navigate('CookedFood')}
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Ready To Eat</Text>
             </TouchableOpacity>
@@ -119,7 +126,7 @@ const Noodles = ({ navigation }) => {
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => () => navigation.navigate('FrozenFoodvvvvvvvvvvvvvvv')}
+              onPress={() => navigation.navigate('FrozenFood')}
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Frozen Foods</Text>
             </TouchableOpacity>
@@ -128,7 +135,7 @@ const Noodles = ({ navigation }) => {
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate('Details')}
+              onPress={() => navigation.navigate('Drinks')}
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Drinks</Text>
             </TouchableOpacity>
@@ -143,7 +150,7 @@ const Noodles = ({ navigation }) => {
           <View style={{ width: 120, height: 50, marginTop: 10 }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => () => navigation.navigate('Snacks')
+              onPress={() => navigation.navigate('Snacks')}
             >
               <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Snacks</Text>
             </TouchableOpacity>
@@ -223,7 +230,14 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 25
   },
-
+  btnAddtoCart: {
+    alignSelf: 'flex-end',
+  },
+  titleCartCont: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '91%',
+  }
 });
 
 export default Noodles;

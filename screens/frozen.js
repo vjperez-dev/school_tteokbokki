@@ -82,7 +82,14 @@ const Products3 = ({ navigation }) => {
         <TouchableOpacity style={{ marginTop: 2 }} onPress={() => navigation.navigate('Home')}>
           <Ionicons name='arrow-back-outline' size={30} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Products</Text>
+        <View style={styles.titleCartCont}>
+          <Text style={styles.headerTitle}>Products</Text>
+          <View>
+            <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+              <AntDesign name='shoppingcart' size={30} />
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
       <View style={styles.container}>
         <View style={styles.title}>
@@ -201,6 +208,14 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 25
   },
+  btnAddtoCart: {
+    alignSelf: 'flex-end',
+  },
+  titleCartCont: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '91%',
+  }
 });
 
 export default Products3;
