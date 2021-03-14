@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "essentials",
-    "slug": "essentials",
+    "name": "SCHOOL TTEOKBOKKI",
+    "slug": "SCHOOL_TTEOKBOKKI",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./img/icon.png",
     "splash": {
-      "image": "./img/splash.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#e7a132"
     },
