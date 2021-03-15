@@ -1,15 +1,13 @@
-import React, { useRef, useState } from 'react';
-import { Text, View, Image, Alert, ImageBackground, StyleSheet, DrawerLayoutAndroid } from 'react-native';
-import Category from '../components/Explore/Category';
+import React, { useRef } from 'react';
+import { Text, View, Image, Alert, StyleSheet, DrawerLayoutAndroid } from 'react-native';
+import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Category1 from '../components/Explore/Category1';
-import Category2 from '../components/Explore/Category2';
-import Ionicons from 'react-native-vector-icons/Ionicons'
-import { TextInput, TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
+// Icons
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwsome from 'react-native-vector-icons/FontAwesome'
-
+// Components
+import Category from '../components/Category';
 
 const AboutUs = ({ navigation }) => {
     const drawer = useRef(null);
